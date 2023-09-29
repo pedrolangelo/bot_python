@@ -25,8 +25,8 @@ def digitarSenha(senha_separada):
     time.sleep(0.1)
     ReleaseKey(keyCode[senha_separada[3]])
 
-def pescar(pesquei):
-    for i in range(20):
+def pegar_peixe(pesquei):
+    for i in range(17):
         PressKey(keyCode['N'])
         time.sleep(0.08)
         ReleaseKey(keyCode['N'])
@@ -44,14 +44,13 @@ def checar(checagem):
     screenshot.save("print.png")
     image = Image.open('print.png')
     image = image.convert("L")  # Converte para escala de cinza
-    image = image.point(lambda p: p > 100 and 255)  # Binarização
+    image = image.point(lambda p: p > 80 and 255)  # Binarização
     enhancer = ImageEnhance.Contrast(image)
     image = enhancer.enhance(2.0)  # Aumenta o contraste (ajuste conforme necessário)
     enhancer = ImageEnhance.Sharpness(image)
     image = enhancer.enhance(2.0)  # Aumenta a nitidez (ajuste conforme necessário)
 
     texto_extraido = pytesseract.image_to_string(image)
-    os.remove("print.png")
 
     padrao = r'\d+'  # Este padrão de regex corresponde a um ou mais dígitos
 
@@ -64,7 +63,13 @@ def checar(checagem):
         for i, numero in enumerate(senha, start=1):
             senha_separada[i] = numero
 
-        digitarSenha(senha_separada)
+        if len(senha_separada) == 3:
+            digitarSenha(senha_separada)
+        else:
+            PressKey(keyCode['ENTER'])
+            time.sleep(0.1)
+            ReleaseKey(keyCode['ENTER'])
+            return
     
         time.sleep(1)
         PressKey(keyCode['ENTER'])
@@ -74,3 +79,8 @@ def checar(checagem):
         PressKey(keyCode['H'])
         time.sleep(0.1)
         ReleaseKey(keyCode['H'])
+
+def jutsuPolicial():
+    PressKey(keyCode['H'])
+    time.sleep(0.1)
+    ReleaseKey(keyCode['H'])
