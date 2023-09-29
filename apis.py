@@ -1,4 +1,5 @@
-from directKeys import PressKey, ReleaseKey, dict as keyCode
+from direct_keys import PressKey, ReleaseKey
+from dict_keys import dict as keyCode
 from PIL import Image, ImageEnhance
 import pytesseract
 import pyautogui
