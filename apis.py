@@ -35,6 +35,7 @@ def pegar_peixe(pesquei):
     time.sleep(random.uniform(0.5, 2))
 
     PressKey(keyCode['H'])
+    print("H")
     time.sleep(0.1)
     ReleaseKey(keyCode['H'])
 
@@ -57,7 +58,7 @@ def checar(checagem):
     senha = re.findall(padrao, texto_extraido)
     print("------------SENHA------------")
     print(senha)
-    if senha:
+    if len(senha) == 1:
         senha = senha[0]
         senha_separada = {}
         for i, numero in enumerate(senha, start=1):
@@ -76,9 +77,13 @@ def checar(checagem):
         time.sleep(0.1)
         ReleaseKey(keyCode['ENTER'])
         time.sleep(1)
-        PressKey(keyCode['H'])
-        time.sleep(0.1)
-        ReleaseKey(keyCode['H'])
+
+        checagem = pyautogui.locateOnScreen('imagens/checagem.png', grayscale=True, confidence=0.4)
+        if checagem is None:
+            PressKey(keyCode['H'])
+            time.sleep(0.1)
+            ReleaseKey(keyCode['H'])
+            print("H")
 
 def jutsuPolicial():
     PressKey(keyCode['H'])
