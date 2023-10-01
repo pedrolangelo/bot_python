@@ -27,6 +27,7 @@ def digitarSenha(senha_separada):
 
 def pegar_peixe(pesquei):
     for i in range(17):
+        time.sleep(random.uniform(gerarNumAleatorio))
         PressKey(keyCode['N'])
         time.sleep(0.08)
         ReleaseKey(keyCode['N'])
