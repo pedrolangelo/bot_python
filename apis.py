@@ -84,6 +84,12 @@ def checar(checagem):
             time.sleep(0.1)
             ReleaseKey(keyCode['H'])
             print("H")
+    else:
+        time.sleep(1)
+        PressKey(keyCode['ENTER'])
+        time.sleep(0.1)
+        ReleaseKey(keyCode['ENTER'])
+        time.sleep(1)
 
 def jutsuPolicial():
     PressKey(keyCode['H'])
