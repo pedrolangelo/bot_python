@@ -27,6 +27,7 @@ def digitarSenha(senha_separada):
 
 def pegar_peixe(pesquei):
     for i in range(17):
+        time.sleep(gerarNumAleatorio())
         PressKey(keyCode['N'])
         time.sleep(0.08)
         ReleaseKey(keyCode['N'])
@@ -84,6 +85,12 @@ def checar(checagem):
             time.sleep(0.1)
             ReleaseKey(keyCode['H'])
             print("H")
+    else:
+        time.sleep(1)
+        PressKey(keyCode['ENTER'])
+        time.sleep(0.1)
+        ReleaseKey(keyCode['ENTER'])
+        time.sleep(1)
 
 def jutsuPolicial():
     PressKey(keyCode['H'])
