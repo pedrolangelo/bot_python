@@ -26,14 +26,14 @@ def digitarSenha(senha_separada):
     ReleaseKey(keyCode[senha_separada[3]])
 
 def pegar_peixe(pesquei):
+    time.sleep(gerarNumAleatorio() + 0.05)
     for i in range(17):
-        time.sleep(gerarNumAleatorio())
         PressKey(keyCode['N'])
         time.sleep(0.08)
         ReleaseKey(keyCode['N'])
         time.sleep(gerarNumAleatorio())
 
-    time.sleep(random.uniform(0.5, 2))
+    time.sleep(random.uniform(0.5, 2.5))
 
     PressKey(keyCode['H'])
     print("H")
@@ -73,7 +73,7 @@ def checar(checagem):
             ReleaseKey(keyCode['ENTER'])
             return
     
-        time.sleep(1)
+        time.sleep(random.uniform(0.5, 2.5))
         PressKey(keyCode['ENTER'])
         time.sleep(0.1)
         ReleaseKey(keyCode['ENTER'])
@@ -86,7 +86,7 @@ def checar(checagem):
             ReleaseKey(keyCode['H'])
             print("H")
     else:
-        time.sleep(1)
+        time.sleep(gerarNumAleatorio())
         PressKey(keyCode['ENTER'])
         time.sleep(0.1)
         ReleaseKey(keyCode['ENTER'])
