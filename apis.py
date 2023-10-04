@@ -102,6 +102,6 @@ def comer_beber():
     freq = 300
     duration = 500 # 0.5seg
 
-    time.sleep(4)
     winsound.Beep(freq, duration)
     print("check")
+    time.sleep(4)
