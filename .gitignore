@@ -1,4 +1,4 @@
-__pycache__/
+__pycache__/*
 imagens/
 print.png
 checagem.png
@@ -6,3 +6,5 @@ pesquei.png
 *.png
 print.png
 print.png
+__pycache__/apis.cpython-310.pyc
+imagens/pesquei.png
