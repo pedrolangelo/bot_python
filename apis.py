@@ -100,8 +100,8 @@ def jutsuPolicial():
 
 def comer_beber():
     freq = 300
-    duration = 500 # 0.5seg
-
-    winsound.Beep(freq, duration)
-    print("check")
-    time.sleep(4)
+    duration = 450 # 0.45seg
+    if count%2 == 0:
+        winsound.Beep(freq, duration)
+        time.sleep(1)
+    count += count # Utiliza o contador para não dar o beep toda hora (teste)
