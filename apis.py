@@ -7,6 +7,7 @@ import time
 import re
 import os
 import random
+import winsound
 
 def gerarNumAleatorio():
     numero_aleatorio = random.uniform(0.03, 0.07)
@@ -96,3 +97,9 @@ def jutsuPolicial():
     PressKey(keyCode['H'])
     time.sleep(0.1)
     ReleaseKey(keyCode['H'])
+
+def comer_beber():
+    freq = 300
+    duration = 900
+    winsound.Beep(freq, duration)
+    print("check")
