@@ -9,11 +9,12 @@ def pescar():
 
     if pesquei is not None:
         pegar_peixe(pesquei)
-        
         if comida is not None or agua is not None:
-            comer_beber()
+            for i in range(3):
+                comer_beber()
         
     elif checagem is not None:
         checar(checagem)
     else:
         return
+    
