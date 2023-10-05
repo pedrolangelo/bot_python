@@ -99,9 +99,7 @@ def jutsuPolicial():
     ReleaseKey(keyCode['H'])
 
 def comer_beber():
-    freq = 300
+    freq = 450
     duration = 450 # 0.45seg
-    if count%2 == 0:
-        winsound.Beep(freq, duration)
-        time.sleep(1)
-    count += count # Utiliza o contador para não dar o beep toda hora (teste)
+    winsound.Beep(freq, duration)
+    time.sleep(0.9)

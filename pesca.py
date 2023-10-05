@@ -1,12 +1,11 @@
 import pyautogui
-from apis import pegar_peixe, checar, comer_beber
-count = 0
+from apis import pegar_peixe, checar, comer_bebernnh
 
 def pescar():
-    pesquei     = pyautogui.locateOnScreen('imagens/pesquei.png', grayscale=True, confidence=0.4)
-    checagem    = pyautogui.locateOnScreen('imagens/checagem.png', grayscale=True, confidence=0.4)
-    comida      = pyautogui.locateOnScreen('imagens/comida_vermelha.png', grayscale=False, confidence=0.7)
-    agua        = pyautogui.locateOnScreen('imagens/agua_vermelha.png', grayscale=False, confidence=0.7)
+    pesquei   = pyautogui.locateOnScreen('imagens/pesquei.png', grayscale=True, confidence=0.4)
+    checagem  = pyautogui.locateOnScreen('imagens/checagem.png', grayscale=True, confidence=0.4)
+    comida    = pyautogui.locateOnScreen('imagens/comida_vermelha.png', grayscale=False, confidence=0.8)
+    agua      = pyautogui.locateOnScreen('imagens/agua_vermelha.png', grayscale=False, confidence=0.8)
 
     if pesquei is not None:
         pegar_peixe(pesquei)

@@ -5,4 +5,4 @@ pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tessera
 
 while True:
     pescar()
-    # cachorro()
+#   cachorro()
