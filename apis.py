@@ -41,6 +41,7 @@ def pegar_peixe(pesquei):
     ReleaseKey(keyCode['H'])
 
 def checar(checagem):
+    time.sleep(gerarNumAleatorio() + 0.5)
     screenshot = pyautogui.screenshot(region=(checagem.left, checagem.top, 400, 300))
 
     screenshot.save("print.png")
@@ -68,9 +69,11 @@ def checar(checagem):
         if len(senha_separada) == 3:
             digitarSenha(senha_separada)
         else:
+            print('aqui 1')
             PressKey(keyCode['ENTER'])
             time.sleep(0.1)
             ReleaseKey(keyCode['ENTER'])
+            time.sleep(gerarNumAleatorio() + 0.5)
             return
     
         time.sleep(random.uniform(0.5, 2.5))
@@ -81,6 +84,7 @@ def checar(checagem):
 
         checagem = pyautogui.locateOnScreen('imagens/checagem.png', grayscale=True, confidence=0.4)
         if checagem is None:
+            print('aqui 2')
             PressKey(keyCode['H'])
             time.sleep(0.1)
             ReleaseKey(keyCode['H'])
