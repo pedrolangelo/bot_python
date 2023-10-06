@@ -8,7 +8,7 @@ def pescar():
     if pesquei is not None:
         pegar_peixe(pesquei)
 
-        raiton()
+        # raiton()
 
         PressKey(keyCode['H'])
         time.sleep(0.1)

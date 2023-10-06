@@ -2,11 +2,14 @@ from direct_keys import PressKey, ReleaseKey
 from dict_keys import dict as keyCode
 import time
 import random
-from apis import gerarNumAleatorio
+
+def gerarNumAleatorio():
+    numero_aleatorio = random.uniform(0.03, 0.07)
+    return numero_aleatorio
 
 def raikyuu():
-    PressKey(keyCode['IGUAL'])
-
+    print('raikyuu')
+    PressKey(keyCode['DEL'])
     PressKey(keyCode['Q'])
     time.sleep(0.08)
     ReleaseKey(keyCode['Q'])
@@ -17,12 +20,14 @@ def raikyuu():
     time.sleep(0.08)
     ReleaseKey(keyCode['E'])
 
-    ReleaseKey(keyCode['IGUAL'])
+    ReleaseKey(keyCode['DEL'])
 
     time.sleep(gerarNumAleatorio() + 0.05)
 
 def arashi():
-    PressKey(keyCode['IGUAL'])
+    print('arashi')
+
+    PressKey(keyCode['DEL'])
 
     PressKey(keyCode['E'])
     time.sleep(0.08)
@@ -33,12 +38,14 @@ def arashi():
     PressKey(keyCode['E'])
     time.sleep(0.08)
     ReleaseKey(keyCode['E'])
-    ReleaseKey(keyCode['IGUAL'])
+    ReleaseKey(keyCode['DEL'])
 
     time.sleep(gerarNumAleatorio() + 0.05)
 
 def clone():
-    PressKey(keyCode['IGUAL'])
+    print('clone')
+
+    PressKey(keyCode['DEL'])
 
     PressKey(keyCode['SHIFT'])
     time.sleep(0.08)
@@ -46,6 +53,5 @@ def clone():
     PressKey(keyCode['C'])
     time.sleep(0.08)
     ReleaseKey(keyCode['C'])
-    ReleaseKey(keyCode['IGUAL'])
-
+    ReleaseKey(keyCode['DEL'])
     time.sleep(gerarNumAleatorio() + 0.05)
