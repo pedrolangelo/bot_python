@@ -5,8 +5,8 @@ import pytesseract
 import pyautogui
 import time
 import re
-import os
 import random
+from jutsus import *
 
 def gerarNumAleatorio():
     numero_aleatorio = random.uniform(0.03, 0.07)
@@ -17,13 +17,19 @@ def digitarSenha(senha_separada):
     time.sleep(0.1)
     ReleaseKey(keyCode[senha_separada[1]])
 
+    time.sleep(gerarNumAleatorio())
+
     PressKey(keyCode[senha_separada[2]])
     time.sleep(0.1)
     ReleaseKey(keyCode[senha_separada[2]])
 
+    time.sleep(gerarNumAleatorio())
+
     PressKey(keyCode[senha_separada[3]])
     time.sleep(0.1)
     ReleaseKey(keyCode[senha_separada[3]])
+
+    time.sleep(gerarNumAleatorio())
 
 def pegar_peixe(pesquei):
     time.sleep(gerarNumAleatorio() + 0.05)
@@ -34,11 +40,6 @@ def pegar_peixe(pesquei):
         time.sleep(gerarNumAleatorio())
 
     time.sleep(random.uniform(0.5, 2.5))
-
-    PressKey(keyCode['H'])
-    print("H")
-    time.sleep(0.1)
-    ReleaseKey(keyCode['H'])
 
 def checar(checagem):
     time.sleep(gerarNumAleatorio() + 0.5)
@@ -84,19 +85,23 @@ def checar(checagem):
 
         checagem = pyautogui.locateOnScreen('imagens/checagem.png', grayscale=True, confidence=0.4)
         if checagem is None:
-            print('aqui 2')
             PressKey(keyCode['H'])
             time.sleep(0.1)
             ReleaseKey(keyCode['H'])
             print("H")
     else:
-        time.sleep(gerarNumAleatorio())
+        print('aqui 2')
         PressKey(keyCode['ENTER'])
         time.sleep(0.1)
         ReleaseKey(keyCode['ENTER'])
+        time.sleep(gerarNumAleatorio())
         time.sleep(1)
 
 def jutsuPolicial():
     PressKey(keyCode['H'])
     time.sleep(0.1)
     ReleaseKey(keyCode['H'])
+
+def raiton():
+    raikyuu()
+    arashi()
