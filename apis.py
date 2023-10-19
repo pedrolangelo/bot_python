@@ -91,9 +91,6 @@ def checar(checagem):
             print("H")
     else:
         print('aqui 2')
-        PressKey(keyCode['ENTER'])
-        time.sleep(0.1)
-        ReleaseKey(keyCode['ENTER'])
         time.sleep(gerarNumAleatorio())
         time.sleep(1)
 

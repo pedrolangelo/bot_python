@@ -13,7 +13,6 @@ dict = {
     'SHIFT'     : 0x10,
     'DIREITO'   : 0x02,
     'DEL'       : 0x2E,
-    'SHIFT'     : 0x10,
     'H'         : 0x48,
     'N'         : 0x4e,
     'E'         : 0x45,
