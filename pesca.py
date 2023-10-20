@@ -9,8 +9,10 @@ def pescar():
     if pesquei is not None:
         pegar_peixe(pesquei)
 
-        sharingan()
-        time.sleep(random.uniform(0.5, 1))
+        # Se quiser usar alguma coisa depois de pegar, coloca aqui embaixo
+        
+        # sharingan()
+        # time.sleep(random.uniform(0.5, 1))
 
         PressKey(keyCode['H'])
         time.sleep(0.1)

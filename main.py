@@ -7,8 +7,9 @@ pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tessera
 
 while True:
     pescar()
-    # print('5s iniciais')
+    # Se for so pra usar jutsu, comenta o pescar() e coloca os jutsus embaixo
     # time.sleep(5)
+    # print('5s iniciais')
     # cachorro()
     # time.sleep(4)
     # sharingan()
