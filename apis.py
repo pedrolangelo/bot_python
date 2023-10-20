@@ -33,7 +33,7 @@ def digitarSenha(senha_separada):
 
 def pegar_peixe(pesquei):
     time.sleep(gerarNumAleatorio() + 0.05)
-    for i in range(17):
+    for i in range(18):
         PressKey(keyCode['N'])
         time.sleep(0.08)
         ReleaseKey(keyCode['N'])
@@ -59,7 +59,7 @@ def checar(checagem):
     padrao = r'\d+'  # Este padrão de regex corresponde a um ou mais dígitos
 
     senha = re.findall(padrao, texto_extraido)
-    print("------------SENHA------------")
+    print("--------------SENHA--------------")
     print(senha)
     if len(senha) == 1:
         senha = senha[0]
@@ -70,7 +70,7 @@ def checar(checagem):
         if len(senha_separada) == 3:
             digitarSenha(senha_separada)
         else:
-            print('aqui 1')
+            print('--- Achei mais de uma senha, bugou ---')
             PressKey(keyCode['ENTER'])
             time.sleep(0.1)
             ReleaseKey(keyCode['ENTER'])
@@ -78,6 +78,8 @@ def checar(checagem):
             return
     
         time.sleep(random.uniform(0.5, 2.5))
+        print('---- ENTER ----')
+
         PressKey(keyCode['ENTER'])
         time.sleep(0.1)
         ReleaseKey(keyCode['ENTER'])
@@ -88,9 +90,11 @@ def checar(checagem):
             PressKey(keyCode['H'])
             time.sleep(0.1)
             ReleaseKey(keyCode['H'])
-            print("H")
     else:
-        print('aqui 2')
+        print('---- Nao achei nada na imagem ----')
+        PressKey(keyCode['ENTER'])
+        time.sleep(0.1)
+        ReleaseKey(keyCode['ENTER'])
         time.sleep(gerarNumAleatorio())
         time.sleep(1)
 
