@@ -1,3 +1,6 @@
+# se faltar alguma tecla, ve o codigo em
+# https://learn.microsoft.com/pt-br/windows/win32/inputdev/virtual-key-codes
+# e adiciona seguindo o padrão abaixo
 dict = {
     '1'         : 0x31,
     '2'         : 0x32,
@@ -17,5 +20,7 @@ dict = {
     'N'         : 0x4e,
     'E'         : 0x45,
     'C'         : 0x43,
-    'Q'         : 0x51
+    'Q'         : 0x51,
+    'R'         : 0x52,
+    'R'         : 0x56,
 }
